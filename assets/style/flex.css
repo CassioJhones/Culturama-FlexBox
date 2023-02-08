@@ -1,3 +1,4 @@
+/* --CABEÇALHO-- */
 .menu {
     display: flex;
     justify-content: space-evenly;
@@ -5,20 +6,95 @@
     flex-wrap: wrap;
     column-gap: 33px;
 }
-@media (min-width: 720px) { /* CODIGO PARA TELAS DE ATÉ 720PX (TABLET) */
- 
-    .menu{
-        column-gap: 75px;
-
-    }
+.categorias__lista {
+    display: flex;
+    flex-direction: column;
+    row-gap: .5rem;
 }
 
+ /* --DESTAQUES- */
+.destaques {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+.destaques__barra {
+    flex-grow: 1; 
+} /* --DESTAQUES- */
+
+
+ /* --PROXIMOS EVENTOS- */
+.eventos__lista{
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 1rem;
+    column-gap: 1.5rem;
+    justify-content: center;
+} 
+.eventos__item {
+    flex-grow: 1;
+    max-width: 400px;
+}/* --PROXIMOS EVENTOS- */
+
+
+/* --COLOQUE NA SUA AGENDA!-- */
+.agenda__lista{
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 1rem;
+    column-gap: 1.5rem;
+}
+
+.agenda__item img{
+    display: grid;
+    grid-column: 1/4;
+}
+
+.agenda__item{
+    display: grid;
+    grid-row: 2/4;
+    justify-content: center;
+}
+.agenda__atracao{
+    grid-row: 2/4;
+     justify-content: center;
+   
+}
+.agenda__informacoes{
+    grid-row: 2/4;
+    
+     justify-content: center;
+}
+
+/* --COLOQUE NA SUA AGENDA-- */
+
+
+
+/* CODIGO PARA TELAS DE ATÉ 720PX (TABLET) */
+@media (min-width: 720px) { 
+    .menu{
+        column-gap: 75px;
+    }
+
+    .categorias__lista {
+        flex-wrap: wrap;
+        column-gap: 1.5rem;
+        row-gap: 1rem;
+    }
+
+    .eventos__lista{
+        justify-content: end;
+    }
+
+} /* CODIGO PARA TELAS DE ATÉ 720PX (TABLET) */
+
+
+/* CODIGO PARA TELAS DE ATÉ 1440PX (PC) */
 @media (min-width: 1440px) {
     .menu{
         column-gap: 105px;
         flex-wrap: nowrap;
     }
-
     /*---- ALTERAR ORDEM DOS ITENS DO MENU ---- */
     .menu__item:nth-child(1){
         order: 1;
@@ -36,4 +112,4 @@
         order: 2;
     }
     /*---- ALTERAR ORDEM DOS ITENS DO MENU ---- */
-}
+} /* CODIGO PARA TELAS DE ATÉ 1440PX (PC) */
