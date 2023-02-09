@@ -37,38 +37,6 @@
 }/* --PROXIMOS EVENTOS- */
 
 
-/* --COLOQUE NA SUA AGENDA!-- */
-.agenda__lista{
-    display: flex;
-    flex-wrap: wrap;
-    row-gap: 1rem;
-    column-gap: 1.5rem;
-}
-
-.agenda__item img{
-    display: grid;
-    grid-column: 1/4;
-}
-
-.agenda__item{
-    display: grid;
-    grid-row: 2/4;
-    justify-content: center;
-}
-.agenda__atracao{
-    grid-row: 2/4;
-     justify-content: center;
-   
-}
-.agenda__informacoes{
-    grid-row: 2/4;
-    
-     justify-content: center;
-}
-
-/* --COLOQUE NA SUA AGENDA-- */
-
-
 
 /* CODIGO PARA TELAS DE ATÉ 720PX (TABLET) */
 @media (min-width: 720px) { 
@@ -87,6 +55,7 @@
     }
 
 } /* CODIGO PARA TELAS DE ATÉ 720PX (TABLET) */
+
 
 
 /* CODIGO PARA TELAS DE ATÉ 1440PX (PC) */
