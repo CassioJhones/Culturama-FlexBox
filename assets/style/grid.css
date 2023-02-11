@@ -3,11 +3,11 @@
     gap: 1rem;
 }
 
-.banner img:nth-child(1){
+.banner img:nth-child(1) {
     grid-column: 1/3;
-
 }
-.banner img:nth-child(4){
+
+.banner img:nth-child(4) {
     grid-column: 2/3;
     grid-row: 2/4;
 }
@@ -15,79 +15,70 @@
 .eventos__item {
     display: grid;
     grid-template-columns: 1fr auto;
-    grid-template-rows: auto repeat(2,1fr) auto;
-    grid-template-areas: 
-    "imagem imagem"
-    "nome nome"
-    "data data"
-    "local botao";
+    grid-template-rows: auto repeat(2, 1fr) auto;
+    grid-template-areas: /* ---AREA GRID CRIADO--- */
+        "imagem imagem"
+        "nome nome"
+        "data data"
+        "local botao";
 }
 
-.eventos__item img{
+.eventos__item img {/* ---POSICAO DO ITEM NO GRID CRIADO--- */
     grid-area: imagem;
 }
 
-.eventos__item h3{
+.eventos__item h3 {/* ---POSICAO DO ITEM NO GRID CRIADO--- */
     grid-area: nome;
     align-self: center;
 }
 
-.eventos__item h4{
+.eventos__item h4 {/* ---POSICAO DO ITEM NO GRID CRIADO--- */
     grid-area: data;
 }
 
-.eventos__item h5{
+.eventos__item h5 {/* ---POSICAO DO ITEM NO GRID CRIADO--- */
     grid-area: local;
     align-self: end;
-
 }
 
-.eventos__item button{
+.eventos__item button {/* ---POSICAO DO ITEM NO GRID CRIADO--- */
     grid-area: botao;
 }
 
-
-
 .agenda__item {
     display: grid;
-    
 }
+
 .agenda__item img {
     grid-column: 1/ 3;
-
 }
+
 .agenda__item {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    
 }
+
 .agenda__item {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-columns: repeat(2, 1fr);
-    
 }
+ 
+@media (min-width:720px) {/* ---CODIGO PARA TELAS APARTIR DE 720PX--- */
 
-
-
-
-
-@media (min-width:720px){
-    .banner{
+   
+    .banner {
         grid-template-columns: calc(50% - 0.75rem) auto auto;
         column-gap: 1.5rem;
     }
 
-
-    .banner img:nth-child(1){
+    .banner img:nth-child(1) {
         grid-column: 1/2;
         grid-row: 1/3;
     }
 
-    .banner img:nth-child(4){
+    .banner img:nth-child(4) {
         grid-column: 3/4;
         grid-row: 1/3;
     }
-}
-
-
+}/* ---CODIGO PARA TELAS APARTIR DE 720PX--- */

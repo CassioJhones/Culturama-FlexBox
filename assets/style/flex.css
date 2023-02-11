@@ -12,73 +12,118 @@
     row-gap: .5rem;
 }
 
- /* --DESTAQUES- */
+/* --DESTAQUES- */
 .destaques {
     display: flex;
     align-items: center;
     column-gap: 10px;
 }
 .destaques__barra {
-    flex-grow: 1; 
-} /* --DESTAQUES- */
+    flex-grow: 1;
+}
+/* --DESTAQUES- */
 
 
- /* --PROXIMOS EVENTOS- */
-.eventos__lista{
+/* --PROXIMOS EVENTOS- */
+.eventos__lista {
     display: flex;
     flex-wrap: wrap;
     row-gap: 1rem;
     column-gap: 1.5rem;
     justify-content: center;
-} 
+}
 .eventos__item {
     flex-grow: 1;
     max-width: 400px;
 }/* --PROXIMOS EVENTOS- */
 
+.agenda__lista {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 1rem;
+    column-gap: 1.5rem;
+    justify-content: center;
+}
+.agenda__item {
+    flex-grow: 1;
+}
 
 
-/* CODIGO PARA TELAS DE ATÉ 720PX (TABLET) */
-@media (min-width: 720px) { 
-    .menu{
+/* ---RODAPÉ--- */
+.rodape {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+/* DEIXA O LOGOTIPO ALINHADO NO FINAL DA PAGINA */
+.rodape__logo {
+    align-self: end;
+}
+/* ---RODAPÉ--- */
+
+
+
+/* CODIGO PARA TELAS APARTIR DE 720PX (TABLET) */
+@media (min-width: 720px) {
+    .menu {
         column-gap: 75px;
     }
-
     .categorias__lista {
         flex-wrap: wrap;
         column-gap: 1.5rem;
         row-gap: 1rem;
     }
-
-    .eventos__lista{
+    .eventos__lista {
         justify-content: end;
     }
-
-} /* CODIGO PARA TELAS DE ATÉ 720PX (TABLET) */
-
+}/* CODIGO PARA TELAS APARTIR DE 720PX (TABLET) */
 
 
-/* CODIGO PARA TELAS DE ATÉ 1440PX (PC) */
+
+/* CODIGO PARA TELAS APARTIR DE 1440PX (PC) */
 @media (min-width: 1440px) {
-    .menu{
+    .menu {
         column-gap: 105px;
         flex-wrap: nowrap;
     }
+    .categorias {
+        display: grid;
+        grid-template-areas:
+            "titulo titulo"
+            "lista destaque"
+            "lista imagem";
+        row-gap: 1rem;
+        column-gap: 1.5rem;
+        grid-template-columns: calc(50% - 0.75rem);
+        grid-template-rows: auto 1fr auto;
+    }
+   
+    .categorias__titulo {/* ---POSICAO DO ITEM NO GRID--- */
+        grid-area: titulo;
+    }
+    .categorias__lista {/* ---POSICAO DO ITEM NO GRID--- */
+        grid-area: lista;
+    }
+    .categorias__destaques {/* ---POSICAO DO ITEM NO GRID--- */
+        grid-area: destaque;
+    }
+    .categorias__imagem {/* ---POSICAO DO ITEM NO GRID--- */
+        grid-area: imagem;
+    }
     /*---- ALTERAR ORDEM DOS ITENS DO MENU ---- */
-    .menu__item:nth-child(1){
+    .menu__item:nth-child(1) {     /* --FILHO NUMERO 1 NA ORDEM 1--- */
         order: 1;
     }
-    .menu__item:nth-child(2){
+    .menu__item:nth-child(2) {/* --FILHO NUMERO 2 NA ORDEM 3--- */
         order: 3;
     }
-    .menu__item:nth-child(3){
+    .menu__item:nth-child(3) {/* --FILHO NUMERO 3 NA ORDEM 4--- */
         order: 4;
     }
-    .menu__item:nth-child(4){
+    .menu__item:nth-child(4) {/* --FILHO NUMERO 4 NA ORDEM 5--- */
         order: 5;
     }
-    .menu__item:nth-child(5){
+    .menu__item:nth-child(5) {/* --FILHO NUMERO 5 NA ORDEM 2--- */
         order: 2;
-    }
-    /*---- ALTERAR ORDEM DOS ITENS DO MENU ---- */
-} /* CODIGO PARA TELAS DE ATÉ 1440PX (PC) */
+    }/*---- ALTERAR ORDEM DOS ITENS DO MENU ---- */
+}/* CODIGO PARA TELAS APARTIR DE 1440PX (PC) */
